@@ -1,0 +1,11 @@
+@import "../base/base.scss";
+@import "../mixins/mixins.scss";
+
+.main-footer {
+  background-color: $color-primary !important;
+  z-index: 1;
+  margin: 0 !important;
+  -webkit-box-shadow: 0px -10px 8px 0px rgba(34, 60, 80, 0.28);
+  -moz-box-shadow: 0px -10px 8px 0px rgba(34, 60, 80, 0.28);
+  box-shadow: 0px -10px 8px 0px rgba(34, 60, 80, 0.28);
+}

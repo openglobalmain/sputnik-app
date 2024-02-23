@@ -1,0 +1,29 @@
+@import "../base/base.scss";
+@import "../mixins/mixins.scss";
+
+#root {
+    width: 100%;
+    height: 100vh;
+
+    .body {
+        margin: 0;
+        font-family: $main-font !important;
+        &::after {
+            content: "";
+            position: fixed; /* Фиксируем на одном месте */
+            left: 0;
+            right: 0; /* Вся ширин */
+            top: 0;
+            bottom: 0; /* Вся высота */
+            z-index: -1;
+            background: url("./../../assets/images/apple-shop-background.jpg")
+                center / cover no-repeat;
+            // background-attachment: fixed;
+            filter: blur(4px);
+        }
+
+        .logoImg {
+            height: 24px;
+        }
+    }
+}

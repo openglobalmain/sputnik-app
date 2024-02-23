@@ -1,0 +1,43 @@
+@import "./styles/main.scss";
+
+.body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainClassForMain {
+    flex-grow: 1;
+}
+
+.spanNoWrap {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.StyledLayer__StyledContainer-sc-rmtehz-2 {
+    border-radius: 20px;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    .Pricing-layout-3 {
+        background-image: url "./../../assets/images/apple-shop-background";
+        background-color: rgba(240, 248, 255, 0) !important;
+        background-attachment: fixed;
+    }
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}

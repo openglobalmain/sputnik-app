@@ -1,0 +1,15 @@
+@import "../base/base.scss";
+@import "../mixins/mixins.scss";
+
+.main-div {
+    .productsCase {
+        padding: 16px;
+    }
+
+    @include from("md") {
+        // width: 70% !important;
+        margin: 20px auto !important;
+        border-radius: 30px;
+    }
+    z-index: 1;
+}
