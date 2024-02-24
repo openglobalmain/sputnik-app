@@ -2,7 +2,6 @@ import {
     Grommet as GrommetIcon,
     FacebookOption,
     Instagram,
-    Twitter,
     Twitch,
 } from "grommet-icons";
 
@@ -30,7 +29,7 @@ const Media = () => (
 
 export const MainFooter = () => (
     <Box>
-        <Footer background="light-3" pad="small" >
+        <Footer background="light-3" pad="small">
             <Box align="center" direction="row" gap="xsmall">
                 <GrommetIcon color="brand" size="medium" />
                 <Text alignSelf="center" color="brand" size="small">

@@ -1,11 +1,11 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import "./index.scss";
 import { Provider } from "react-redux";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Grommet } from "grommet";
 import { store } from "./stateManagement/store";
 import App from "./app/AppComp/App";
+import "./index.scss";
 
 const root = createRoot(document.getElementById("root") as HTMLElement);
 
@@ -22,7 +22,7 @@ const theme = {
 
 root.render(
     <StrictMode>
-        <Grommet theme={theme} style={{height:"100%"}}>
+        <Grommet theme={theme} style={{ height: "100%" }}>
             <Provider store={store}>
                 <BrowserRouter>
                     <Routes>

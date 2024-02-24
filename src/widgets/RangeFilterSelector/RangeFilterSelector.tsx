@@ -1,10 +1,10 @@
 import { Box, FormField, RangeSelector } from "grommet";
 import { useDispatch } from "react-redux";
 import {
-  setDiscountPercentageRange,
-  setPriceRange,
-  setRatingRange,
-  setStockRange,
+    setDiscountPercentageRange,
+    setPriceRange,
+    setRatingRange,
+    setStockRange,
 } from "../../stateManagement/reducers/ProductsInfoSlice";
 import { useAppSelector } from "../../stateManagement/hooks/redux";
 

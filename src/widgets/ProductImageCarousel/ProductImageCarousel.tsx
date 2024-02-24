@@ -4,7 +4,7 @@ export const ProductImageCarousel = ({
     images,
     thumbnail,
     title,
-    type
+    type,
 }: {
     images: string[];
     thumbnail: string;
@@ -16,10 +16,10 @@ export const ProductImageCarousel = ({
             {(size) =>
                 size === "small" ? (
                     <Box
-                    margin={{
-                        left:"10px", 
-                        right:"10px" 
-,                    }}
+                        margin={{
+                            left: "10px",
+                            right: "10px",
+                        }}
                         pad="large"
                         style={{
                             width: "180px",
@@ -43,15 +43,16 @@ export const ProductImageCarousel = ({
                             <Box
                                 pad="large"
                                 style={{
-                                    width: (type === "card") ? "240px" : "180px",
-                                    height: (type === "card") ? "240px" : "200px",
+                                    width: type === "card" ? "240px" : "180px",
+                                    height: type === "card" ? "240px" : "200px",
                                 }}
                             >
                                 <Image
                                     src={thumbnail}
                                     alt={title}
                                     style={{
-                                        width: (type === "card") ? "300px" : "140px",
+                                        width:
+                                            type === "card" ? "300px" : "140px",
                                     }}
                                     alignSelf="center"
                                     fit="contain"
@@ -61,11 +62,11 @@ export const ProductImageCarousel = ({
                         )}
                         {images.map((image, index) => (
                             <Box
-                                    key={index}
+                                key={index}
                                 pad="large"
                                 style={{
-                                    width: (type === "card") ? "240px" : "180px",
-                                    height: (type === "card") ? "240px" : "200px",
+                                    width: type === "card" ? "240px" : "180px",
+                                    height: type === "card" ? "240px" : "200px",
                                 }}
                             >
                                 <Image

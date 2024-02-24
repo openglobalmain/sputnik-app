@@ -7,7 +7,11 @@ export const ObjectPreviewCard = ({ product }: { product: IProduct }) => (
         position="center"
         margin={{ vertical: "small", start: "xlarge", end: "medium" }}
     >
-        <Box pad={{bottom:"25px"}} overflow="auto" style={{ borderRadius: "30px" }}>
+        <Box
+            pad={{ bottom: "25px" }}
+            overflow="auto"
+            style={{ borderRadius: "30px" }}
+        >
             <Grid
                 rows={["xsmall", "xxsmall", "xsmall", "xsmall", "xxsmall"]}
                 columns={["medium", "medium"]}
@@ -28,7 +32,7 @@ export const ObjectPreviewCard = ({ product }: { product: IProduct }) => (
                     justify="center"
                     align="center"
                     margin="medium"
-                    style={{borderRadius:"30px", border:"1px solid black"}}
+                    style={{ borderRadius: "30px", border: "1px solid black" }}
                 >
                     <ProductImageCarousel
                         images={product!.images}
@@ -37,9 +41,7 @@ export const ObjectPreviewCard = ({ product }: { product: IProduct }) => (
                         type={"card"}
                     />
                     <Box justify="center" align="center" pad="medium">
-                        <Text textAlign="center">
-                            Stock: {product.stock}
-                        </Text>
+                        <Text textAlign="center">Stock: {product.stock}</Text>
                     </Box>
                 </Box>
                 <Box
@@ -48,7 +50,9 @@ export const ObjectPreviewCard = ({ product }: { product: IProduct }) => (
                     align="center"
                     pad="medium"
                 >
-                    <Text weight="bold" textAlign="center">{product.title}</Text>
+                    <Text weight="bold" textAlign="center">
+                        {product.title}
+                    </Text>
                 </Box>
                 <Box
                     gridArea="description"
@@ -67,12 +71,8 @@ export const ObjectPreviewCard = ({ product }: { product: IProduct }) => (
                     align="center"
                     pad="xlamediumrge"
                 >
-                    <Text textAlign="center">
-                        Brand: {product.brand}
-                    </Text>
-                    <Text textAlign="center">
-                        Category: {product.category}
-                    </Text>
+                    <Text textAlign="center">Brand: {product.brand}</Text>
+                    <Text textAlign="center">Category: {product.category}</Text>
                 </Box>
                 <Box
                     gridArea="rating"

@@ -4,7 +4,10 @@ import { ProductCard } from "../../ProductCard";
 import { FilterLayer } from "../../../widgets/filters/FilterLayer";
 import { useAppSelector } from "../../../stateManagement/hooks/redux";
 import { useDispatch } from "react-redux";
-import { applyTableMode, setActualPage } from "../../../stateManagement/reducers/ProductsInfoSlice";
+import {
+    applyTableMode,
+    setActualPage,
+} from "../../../stateManagement/reducers/ProductsInfoSlice";
 import { IProduct } from "../../../models/IProduct";
 import { ProductsTable } from "../../../widgets/table/ProductsTable";
 
@@ -95,14 +98,16 @@ export const MobileVersionOfCardsList = () => {
 
             <Box background="brand" gridArea="footer" round="medium">
                 <Box align="center">
-                    {!isTableModeOn && <Pagination
-                        numberItems={filteredData.products.length}
-                        page={page}
-                        step={itemsPerPage}
-                        onChange={(selectedPage: any) => {
-                            dispatch(setActualPage(selectedPage.page));
-                        }}
-                    />}
+                    {!isTableModeOn && (
+                        <Pagination
+                            numberItems={filteredData.products.length}
+                            page={page}
+                            step={itemsPerPage}
+                            onChange={(selectedPage: any) => {
+                                dispatch(setActualPage(selectedPage.page));
+                            }}
+                        />
+                    )}
                 </Box>
             </Box>
         </Grid>

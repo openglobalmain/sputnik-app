@@ -21,7 +21,6 @@ export const FilterLayer = () => {
     );
 
     function handleFilter(event: any) {
-
         if (
             event.value &&
             event.value.category &&

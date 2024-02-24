@@ -16,7 +16,10 @@ export const MainPage = () => {
                 </div>
             </main>
             {/* Footer */}
-            <div className="main-footer" style={{bottom: 0, left: 0, width: '100%' }}>
+            <div
+                className="main-footer"
+                style={{ bottom: 0, left: 0, width: "100%" }}
+            >
                 <MainFooter />
             </div>
             {/* End footer */}

@@ -1,7 +1,5 @@
 import { useEffect, useState } from "react";
-
 import { Close, Edit } from "grommet-icons";
-
 import {
     Box,
     Button,

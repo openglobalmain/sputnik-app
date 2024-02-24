@@ -125,22 +125,20 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
                                             horizontal: "medium",
                                             vertical: "small",
                                         }}
-
                                         height="40px"
                                         overflow="hidden"
-                                        
                                     >
-                                        <Text className="spanNoWrap" weight="bold">
+                                        <Text
+                                            className="spanNoWrap"
+                                            weight="bold"
+                                        >
                                             {product.title}
                                         </Text>
                                     </CardHeader>
                                     {/* End of title */}
 
                                     {/* Product description & rating  */}
-                                    <Box
-                                        gridArea="description"
-                                        height="60px"
-                                    >
+                                    <Box gridArea="description" height="60px">
                                         <Text
                                             truncate={true}
                                             margin={{ bottom: "small" }}
@@ -222,7 +220,11 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
                                     {/* End of title */}
 
                                     {/* Product description */}
-                                    <Box gridArea="description" height="xxsmall" overflow="hidden">
+                                    <Box
+                                        gridArea="description"
+                                        height="xxsmall"
+                                        overflow="hidden"
+                                    >
                                         <Text margin={{ bottom: "xsmall" }}>
                                             {product.description}
                                         </Text>
@@ -258,7 +260,7 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
                                                 justify="start"
                                                 ref={targetRef}
                                                 margin={{
-                                                    bottom:"large"
+                                                    bottom: "large",
                                                 }}
                                             >
                                                 <Button
@@ -286,7 +288,7 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
                                                             bottom: "small",
                                                         }}
                                                         onClickOutside={() => {
-                                                            handleDropOpenButtonClick()
+                                                            handleDropOpenButtonClick();
                                                         }}
                                                     >
                                                         <Box
@@ -337,8 +339,7 @@ export const ProductCard = ({ product }: { product: IProduct }) => {
                                                                     label="Remove"
                                                                     onClick={() => {
                                                                         handleRemoveObjectButton(
-                                                                            product
-                                                                                .id
+                                                                            product.id
                                                                         );
                                                                     }}
                                                                 />

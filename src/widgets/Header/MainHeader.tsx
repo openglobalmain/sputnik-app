@@ -1,10 +1,9 @@
 import { Anchor, Box, Header, Menu, ResponsiveContext } from "grommet";
-import { Figma, Grommet as GrommetIcon, Menu as MenuIcon } from "grommet-icons";
+import { Grommet as GrommetIcon, Menu as MenuIcon } from "grommet-icons";
 
 export const MainHeader = () => {
     return (
         <Header background="light-3" pad="medium" height="xsmall">
-            {/* style={{ position: 'fixed',top: '0', width: '100%', zIndex: 1 }} */}
             <Box justify="start" direction="row" gap="medium">
                 <Anchor
                     href="https://tools.grommet.io/"
@@ -47,7 +46,7 @@ export const MainHeader = () => {
                             <img
                                 className="logoImg"
                                 src={require("../../assets/icons/telegramIcon.png")}
-                                alt={'telegramIcon'}
+                                alt={"telegramIcon"}
                             />
                             <Anchor
                                 href="https://t.me/daln1st"

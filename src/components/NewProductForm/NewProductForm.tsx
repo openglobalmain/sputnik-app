@@ -1,7 +1,5 @@
 import { useState } from "react";
-
-import { AddCircle, Close, Edit, StatusGood } from "grommet-icons";
-
+import { AddCircle, Close } from "grommet-icons";
 import {
     Box,
     Button,
@@ -16,13 +14,9 @@ import { IProduct } from "../../models/IProduct";
 import {
     useAddProductMutation,
     useGetAllCategoryQuery,
-    useUpdateProductMutation,
 } from "../../api/componentsApiSlice/productsApiSlice";
 import { useDispatch } from "react-redux";
-import {
-    setFilteredData,
-    setNewAddedObject,
-} from "../../stateManagement/reducers/ProductsInfoSlice";
+import { setFilteredData } from "../../stateManagement/reducers/ProductsInfoSlice";
 import { useAppSelector } from "../../stateManagement/hooks/redux";
 import { exampleData } from "../../assets/dataExamples/exampleOfData";
 
@@ -33,7 +27,9 @@ export const NewProductForm = () => {
         (state) => state.products.filteredObjectData
     );
 
-    const product = filteredData.products[0] ? filteredData.products[0] : exampleData.products[0];
+    const product = filteredData.products[0]
+        ? filteredData.products[0]
+        : exampleData.products[0];
     const [open, setOpen] = useState<boolean>(false);
     const [title, setTitle] = useState<string>(product.title);
     const [description, setDescription] = useState<string>(product.description);

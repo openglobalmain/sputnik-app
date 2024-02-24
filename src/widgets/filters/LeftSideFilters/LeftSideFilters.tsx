@@ -13,27 +13,24 @@ export const LeftSideFilters = () => {
 
     const { data: categoriesData } = useGetAllCategoryQuery({});
 
-    const currenrData = useAppSelector(
+    const currentData = useAppSelector(
         (state) => state.products.actualObjectData
     );
 
     function handleFilter(event: any) {
-
         if (
             event.value &&
             event.value.category &&
             event.value.category.length
         ) {
             dispatch(setCategory(event.value.category));
-        }
-        else{
+        } else {
             dispatch(setCategory([]));
         }
 
         if (event.value && event.value.brand && event.value.brand.length) {
             dispatch(setBrand(event.value.brand));
-        }
-        else{
+        } else {
             dispatch(setBrand([]));
         }
     }
@@ -41,18 +38,26 @@ export const LeftSideFilters = () => {
     return (
         <Box align="center" justify="start" pad="medium" gap="small">
             <Text color="dark-1">Category Filters:</Text>
-            {currenrData &&
-                currenrData.products &&
-                currenrData.products.length > 0 && (
-                    <Data data={currenrData.products} onSubmit={handleFilter}>
+            {currentData &&
+                currentData.products &&
+                currentData.products.length > 0 && (
+                    <Data data={currentData.products} onSubmit={handleFilter}>
                         <DataFilters updateOn={"submit"}>
                             <DataFilter property="brand" />
-                            <DataFilter property="category" options={categoriesData}/>
+                            <DataFilter
+                                property="category"
+                                options={categoriesData}
+                            />
                         </DataFilters>
                     </Data>
                 )}
-
-            <Box pad="medium" align="center" justify="center" border={true} round="small" >
+            <Box
+                pad="medium"
+                align="center"
+                justify="center"
+                border={true}
+                round="small"
+            >
                 <Text color="dark-1">Other Filters:</Text>
                 <FilterLayer />
             </Box>

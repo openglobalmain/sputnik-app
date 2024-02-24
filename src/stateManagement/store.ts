@@ -7,7 +7,8 @@ export const store = configureStore({
         [dummyApi.reducerPath]: dummyApi.reducer,
         products: productsInfoReducer,
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat([dummyApi.middleware]),
+    middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware().concat([dummyApi.middleware]),
     devTools: true,
 });
 

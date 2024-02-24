@@ -104,16 +104,15 @@ export const FullVersionOfCardsList = () => {
                                         rows="small"
                                         gap="medium"
                                     >
-                                        {paginatedData.products
-                                            .map(
-                                                (product: IProduct) =>
-                                                    !product.isDeleted && (
-                                                        <ProductCard
-                                                            key={product.id}
-                                                            product={product}
-                                                        />
-                                                    )
-                                            )}
+                                        {paginatedData.products.map(
+                                            (product: IProduct) =>
+                                                !product.isDeleted && (
+                                                    <ProductCard
+                                                        key={product.id}
+                                                        product={product}
+                                                    />
+                                                )
+                                        )}
                                     </Grid>
                                 )}
                             </div>
